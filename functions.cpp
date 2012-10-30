@@ -7,8 +7,9 @@ int DemoConsoleOutput();
 
 int main(){
 	//call function DemoConsoleOutput()
+	//using return value of function to end main() function
 	DemoConsoleOutput();
-	return 0;
+	//return 0;
 }//main()
 
 int DemoConsoleOutput(){
