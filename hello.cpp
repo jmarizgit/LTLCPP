@@ -11,4 +11,5 @@ int main(){
 	/*new example without std::*/
 	cout << "Hello world!" << endl;
 
+	return 0;
 }//main()
