@@ -10,6 +10,7 @@ using namespace std;
 int main(){
 	//variable to store integer from user
 	int InputNumber;
+	string InputName;
 
 	cout << "Enter an integer: ";
 	//store integer given user input
@@ -17,7 +18,7 @@ int main(){
 
 	//The same with text/string data
 	cout << "Enter your name: ";
-	string InputName;
+	
 	cin >> InputName;
 	cout << InputName << " entered " << InputNumber << endl;
 
