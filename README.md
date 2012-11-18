@@ -44,7 +44,24 @@ int main()
 Namespaces are used to create "shortcuts" for objects, classes, and functions.
 
 **namespaces.cpp**
+```cpp
+#include <iostream>
 
+//example of namespace
+namespace mariz{
+	int age = 31;
+}
+namespace samira{
+	int age = 25;
+}
+
+int main(){
+	//accessing namespace variables using the scope operator "::"
+	std::cout << mariz::age << endl;
+	std::cout << samira::age << endl;
+	return 0;
+}
+```
 
 
 
@@ -54,15 +71,16 @@ OOP - Object Oriented Programing
 C++ implements OOP features. Let's start with the concept of **classes**.
 
 **class.cpp**
+```cpp
+#include <iostream>
+using namespace std;
 
-	#include <iostream>
-	using namespace std;
+class Car{
+	string brand, engine, type;
+};
 
-	class Car{
-		string brand, engine, type;
-	};
-
-	int main(){
-	    Car bmw;
-	    return 0;
-	}
+int main(){
+    Car bmw;
+    return 0;
+}
+```
