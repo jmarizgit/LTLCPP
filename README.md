@@ -25,7 +25,7 @@ _C++ (pronounced "see plus plus") is a statically typed, free-form, multi-paradi
 **link:** [http://en.wikipedia.org/wiki/C%2B%2B](http://en.wikipedia.org/wiki/C%2B%2B)
 
 
-Introduction
+3. Introduction <a id="#introduction"></a>
 ------------
 Here is how you write a simple **hello world** program in c++:
 
@@ -41,7 +41,6 @@ int main()
 	return 0; // 0 = successfully exit
 }
 ```
-Namespaces are used to create "shortcuts" for objects, classes, and functions.
 
 **namespaces.cpp**
 ```cpp
@@ -62,7 +61,19 @@ int main(){
 	return 0;
 }
 ```
+Namespaces are used to create "shortcuts" for objects, classes, and functions. The scope operator "**::**" allow you to access object variables and methods.
 
+**namespaces_std.cpp**
+```cpp
+#include <iostream>
+using namespace std; //"using" makes the namespace "std" available for the entire program
+
+int main(){
+	//std::cout << "Hello World!"; //without "using" namespace "std"
+	cout << "Hello World!"; //we don't need the scope operator "::" because we are "using" namespace "std"
+	return 0;
+}
+```
 
 
 

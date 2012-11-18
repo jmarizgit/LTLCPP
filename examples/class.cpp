@@ -1,10 +1,12 @@
 #include <iostream>
+using namespace std;
 
-class Car{
-    std::string brand, engine, type;
+class Person{
+    string name;
+    int age;
 };
 
 int main(){
-    Car bmw;
+    Person mariz;
     return 0;
 }
