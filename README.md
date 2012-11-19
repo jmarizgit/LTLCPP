@@ -1,7 +1,7 @@
-Learn To Love - C++
+Learn To Love C++
 ===================
 This is a online reference for C++. Written and maintaned by [Mariz Melo](http://github.com/jmarizgit).<br>
-You can find this document and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/ltl.cpp](http://github.com/jmarizgit/ltl.cpp).
+You can find this documentation and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/ltl.cpp](http://github.com/jmarizgit/ltl.cpp).
 
 Table of contents
 -----------------
@@ -30,6 +30,7 @@ _C++ (pronounced "see plus plus") is a statically typed, free-form, multi-paradi
 Here is how you write a simple **hello world** program in c++:
 
 **hello.cpp**
+
 ```cpp
 //Standard Libraries
 #include <iostream> //input/output library
@@ -42,7 +43,36 @@ int main()
 }
 ```
 
+The "**#include**" on top of our program says that the compiler should look for the standard library <iostream> and include its content before proceed with the program compilation. This process is called "**Preprocessor Directives**".<br/>
+The **iostream** library provides input and output functions to your program.<br/>
+All programs in C/C++ must have one **unique** function called **main()**. This function is the start point of your program.
+
+**comments.cpp**
+
+```cpp
+// this is a single line comment
+
+/* now I can comment using
+   multiple lines.
+*/
+```
+The " **//** " character is used at the beginning of the line and indicates a single line comment. The structure **/* comments */** allows you to write comments using multiple lines.
+
+**datatypes.cpp**
+
+```cpp
+#include <iostream>
+
+int main(){
+	short age; //2 bytes = signed: -32768 to 32767, unsigned: 0 to 65535
+	int age;	//4 bytes = signed: -2147483648 to 2147483647, unsigned: 0 to 4294967295
+	string name; //
+	char 
+}
+```
+
 **namespaces.cpp**
+
 ```cpp
 #include <iostream>
 
@@ -61,9 +91,11 @@ int main(){
 	return 0;
 }
 ```
-Namespaces are used to create "shortcuts" for objects, classes, and functions. The scope operator "**::**" allow you to access object variables and methods.
 
-**namespaces_std.cpp**
+Namespaces are used to create "shortcuts" for objects, classes, and functions. The scope operator "**::**" grants you access to object variables and methods.
+
+**namespace_std.cpp**
+
 ```cpp
 #include <iostream>
 using namespace std; //"using" makes the namespace "std" available for the entire program
@@ -75,23 +107,63 @@ int main(){
 }
 ```
 
+Since input and output operations are very common in c++ programs is a good idea to have this namespace declaration in your programs. In fact I will be using this declaration for now on.
 
 
-OOP - Object Oriented Programing
+
+OOP (Object Oriented Programing)
 --------------------------------
 C++ implements OOP features. Let's start with the concept of **classes**.
 
 **class.cpp**
+
 ```cpp
 #include <iostream>
 using namespace std;
 
-class Car{
-	string brand, engine, type;
-};
+//Your first class declaration
+class Person{
+    string name;
+    int age;
+}; //don't forget the semicolon when ending your class
 
 int main(){
-    Car bmw;
+    Person mariz; //creating an "instance" of Person
     return 0;
 }
 ```
+
+Classes are a way to group certain characteristics and behaviors of an object. With classes is easier for you to organize and upgrade your code.
+
+**ATTENTION**: you must end the curl brackets with a semicolon (;) when declaring a class, otherwise you will get an error.
+
+
+**access_specifiers.cpp**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Person{
+	private: // ** optional ** all methods and attributes are private by default in c++
+		string email;
+		int age;
+	public: // will be accessible for the entire program
+		string name;
+		string language;
+	protected: //will be accessible for inherited classes
+		float height;
+		char size;
+};
+
+int main(){
+    Person mariz;	//created an "instance" of Person
+    return 0;
+}
+```
+
+In C++ all methods and attributes are **private** by default. This means that the methods and attributes can only be accessed whithin the class.
+
+**Public** attributes and methods can be accessed for the entire program.
+
+**Protected** attributes and methods will act like private but can be accessed by inherited classes.
