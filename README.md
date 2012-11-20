@@ -1,7 +1,8 @@
 Learn To Love C++
 ===================
 This is a online reference for C++. Written and maintaned by [Mariz Melo](http://github.com/jmarizgit).<br>
-You can find this documentation and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/ltl.cpp](http://github.com/jmarizgit/ltl.cpp).
+You can find this documentation and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/LTLCPP](http://github.com/jmarizgit/LTLCPP).
+
 
 Table of contents
 -----------------
@@ -12,6 +13,7 @@ Table of contents
 1. Pre-Requesites <a id="#prerequesites"></a>
 -----------------
 Before we get start make sure to meet the requirements:
+
 
 1. A **web browser** ([chrome](http://www.google.com/chrome), [firefox](http://www.mozilla.org/), or [safari](http://support.apple.com/downloads/#safari));
 2. Familiarity with at least one **programing language** is recommended;
