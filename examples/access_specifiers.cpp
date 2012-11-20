@@ -5,10 +5,10 @@ class Person{
 	private: // ** optional ** all methods and attributes are private by default in c++
 		string email;
 		int age;
-	public: // will be accessible for the entire program
+	public: // will be accessible by the entire program
 		string name;
 		string language;
-	protected: //will be accessible for inherited classes
+	protected: //will be accessible by inherited classes
 		float height;
 		char size;
 };

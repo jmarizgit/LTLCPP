@@ -64,10 +64,13 @@ The " **//** " character is used at the beginning of the line and indicates a si
 #include <iostream>
 
 int main(){
-	short age; //2 bytes = signed: -32768 to 32767, unsigned: 0 to 65535
-	int age;	//4 bytes = signed: -2147483648 to 2147483647, unsigned: 0 to 4294967295
-	string name; //
-	char 
+	char character;	//1byte	signed: -128 to 127, unsigned: 0 to 255
+	short shortint; //2bytes	signed: -32768 to 32767, unsigned: 0 to 65535
+	int integer;	//4bytes	signed: -2147483648 to 2147483647, unsigned: 0 to 4294967295
+	long longint; //4bytes	signed: -2147483648 to 2147483647, unsigned: 0 to 4294967295
+	double longdouble; //8bytes	+/- 1.7e +/- 308 (~15 digits)
+	bool truefalse; //1byte	true or false
+	return 0;
 }
 ```
 
@@ -148,10 +151,10 @@ class Person{
 	private: // ** optional ** all methods and attributes are private by default in c++
 		string email;
 		int age;
-	public: // will be accessible for the entire program
+	public: // will be accessible by the entire program
 		string name;
 		string language;
-	protected: //will be accessible for inherited classes
+	protected: //will be accessible by inherited classes
 		float height;
 		char size;
 };
@@ -162,7 +165,7 @@ int main(){
 }
 ```
 
-In C++ all methods and attributes are **private** by default. This means that the methods and attributes can only be accessed whithin the class.
+**Private** is the default access specifier in C++. All methods and attributes are **private** by default. This means that the methods and attributes can only be accessed whithin the class.
 
 **Public** attributes and methods can be accessed for the entire program.
 
