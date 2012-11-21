@@ -218,9 +218,10 @@ void hello(char message[]){
 
 Strings
 -------
-Strings are a important part of any language, is not different in C++. Below you can have a brief idea how to use strings.<br/>
-In C++ you don't need to insert the library "< string.h >" if you already have "< iostream >" in your preprocessor directives. This is an interesting discussion that you can read about [here](http://www.cplusplus.com/forum/beginner/889/).
+The type "String" is an important part of any language, is not different in C++. Below you can have a brief idea how to use strings.<br/>
+In C++ you don't need to insert the library "< string >" (**in c++ you can omit the ".h" reference**) if you already have "< iostream >" in your preprocessor directives. This is an interesting discussion that you can read about [here](http://www.cplusplus.com/forum/beginner/889/).
 
+###strings.cpp
 ```cpp
 #include <iostream>
 using namespace std;
@@ -234,8 +235,34 @@ int main(){
 	return 0;
 }
 ```
-<br/>
 
+###strings_comparasion.cpp
+The first thing to remember here is that C/C++ are **case sensitive**. That means that "hello" is not the same as "Hello" (capital letter on the first character). We will be using the method **compare** of strings.
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    //REMEMBER: C/C++ are case sensitive
+    string s1 = "Hello";
+    string s2 = "hello";
+    string s3 = "Hello";
+
+    //using built-in method "compare"
+    if ( s1.compare(s2) == 0 ){ // 0 indicates "equal"
+    	cout << "s1 is EQUAL to s2" << endl;	//comparing s1 and s2
+    }else{
+    	cout << "s1 is NOT EQUAL to s2" <<endl;
+    }
+
+    if( s1.compare(s3) == 0 ){ //comparing s1 and s3
+    		cout << "s1 is EQUAL to s3" << endl;
+    }else{
+    	cout << "s1 is NOT EQUAL to s3" << endl;
+    }
+	return 0;
+}
+```
 
 Files
 -----
