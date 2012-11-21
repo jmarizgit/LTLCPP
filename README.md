@@ -219,11 +219,14 @@ void hello(char message[]){
 Strings
 -------
 The type "String" is an important part of any language, is not different in C++. Below you can have a brief idea how to use strings.<br/>
-In C++ you don't need to insert the library "< string >" (**in c++ you can omit the ".h" reference**) if you already have "< iostream >" in your preprocessor directives. This is an interesting discussion that you can read about [here](http://www.cplusplus.com/forum/beginner/889/).
+In GCC you don't need to insert the library "< string >" (**in c++ you can omit the ".h" reference**) if you already have "< iostream >" in your preprocessor directives. 
+
+We should not assume < iostream > being implemented always including < string >, so for security reasons include **< string >** in your preprocessor directives. This is an interesting discussion that you can read about [here](http://www.cplusplus.com/forum/beginner/889/).
 
 ###strings.cpp
 ```cpp
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(){
@@ -240,6 +243,7 @@ int main(){
 The first thing to remember here is that C/C++ are **case sensitive**. That means that "hello" is not the same as "Hello" (capital letter on the first character). We will be using the method **compare** of strings.
 ```cpp
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(){
@@ -263,6 +267,7 @@ int main(){
 	return 0;
 }
 ```
+<br/>
 
 Files
 -----
@@ -272,6 +277,7 @@ File operations are very common in real-life applications. Implement this featur
 ```cpp
 #include <iostream>
 #include <fstream>	//deal with files input/output
+#include <string>
 using namespace std;
 
 int main(){
@@ -310,6 +316,7 @@ Classes are a way to group certain characteristics and behaviors of an object. W
 **ATTENTION**: you must end the curl brackets with a semicolon (;) when declaring a class, otherwise you will get an error.
 ```cpp
 #include <iostream>
+#include <string>
 using namespace std;
 
 //Your first class declaration
@@ -332,6 +339,7 @@ int main(){
 **Protected** attributes and methods will act like private but can be accessed by inherited classes.
 ```cpp
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Person{
