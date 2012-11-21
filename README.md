@@ -1,6 +1,6 @@
 Learn To Love C++
 ===================
-Is not required, but you may want to read "**Learn To Love C**" before read this material. You can find the C guide at [http://github.com/jmarizgit/LTLC](http://github.com/jmarizgit/LTLC).
+Is not required, but you may want to read **"Learn To Love C"** before read this material. You can find the C guide at [http://github.com/jmarizgit/LTLC](http://github.com/jmarizgit/LTLC) (in progress).
 
 This is an online reference for C++. Written and maintaned by [Mariz Melo](http://github.com/jmarizgit).<br>
 You can find this documentation and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/LTLCPP](http://github.com/jmarizgit/LTLCPP).
@@ -14,7 +14,7 @@ Table of contents
 2. [Wikipedia](#wikipedia)
 <br/><br/>
 
-1. Pre-Requesites <a id="#prerequesites"></a>
+1. Requirements <a id="#prerequesites"></a>
 -----------------
 Before we get start make sure to meet the requirements:
 
@@ -239,8 +239,20 @@ int main(){
 
 Files
 -----
-File operations are very common in real-life applications. Implement this feature is easy in C++, differently from C. You will need to include the **"< fstream >"** library using the preprocessor "#include".
+File operations are very common in real-life applications. Implement this feature is easy in C++, different from C. You will need to include the **"< fstream >"** library using the preprocessor "#include".
+```cpp
+#include <iostream>
+#include <fstream>	//deal with files input/output
+using namespace std;
 
+int main(){
+	string buffer; //will hold temporarily content of file
+	ifstream in("lorem.txt"); //opening file "lorem.txt" for reading
+	while(getline(in, buffer)){
+		cout << buffer << "\n"; //reading line by line and send to monitor
+	}
+}
+```
 <br/>
 
 
