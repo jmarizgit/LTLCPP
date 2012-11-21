@@ -240,6 +240,8 @@ int main(){
 Files
 -----
 File operations are very common in real-life applications. Implement this feature is easy in C++, different from C. You will need to include the **"< fstream >"** library using the preprocessor "#include".
+
+###fstream.cpp
 ```cpp
 #include <iostream>
 #include <fstream>	//deal with files input/output
@@ -252,6 +254,22 @@ int main(){
 		cout << buffer << "\n"; //reading line by line and send to monitor
 	}
 }
+```
+###lorem.txt
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Vivamus ultrices aliquet interdum. 
+In magna urna, cursus non volutpat ut, tincidunt et orci. 
+Cras lorem est, interdum euismod accumsan at, aliquam nec nisi. 
+Proin porttitor quam vitae massa fermentum condimentum. 
+Mauris eget condimentum justo. 
+Suspendisse potenti. 
+
+Donec blandit enim id turpis volutpat facilisis. 
+Suspendisse semper nisl sed nisl porta congue. 
+Aenean placerat risus eu ante volutpat ut volutpat nulla posuere. 
+Nunc tincidunt sapien vitae sapien gravida et faucibus metus lacinia. 
+Nunc a diam metus, rhoncus posuere purus.
 ```
 <br/>
 
