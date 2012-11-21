@@ -33,7 +33,7 @@ _C++ (pronounced "see plus plus") is a statically typed, free-form, multi-paradi
 ------------
 Here is how you write a simple **hello world** program in c++:
 
-**hello.cpp**
+###hello.cpp
 
 ```cpp
 //Standard Libraries
@@ -51,7 +51,7 @@ The "**#include**" on top of our program says that the compiler should look for 
 The **iostream** library provides input and output functions to your program.<br/>
 All programs in C/C++ must have one **unique** function called **main()**. This function is the start point of your program.
 
-**comments.cpp**
+###comments
 
 ```cpp
 // this is a single line comment
@@ -62,7 +62,7 @@ All programs in C/C++ must have one **unique** function called **main()**. This 
 ```
 The " **//** " character is used at the beginning of the line and indicates a single line comment. The structure **/* comments */** allows you to write comments using multiple lines.
 
-**datatypes.cpp**
+###datatypes.cpp
 
 ```cpp
 #include <iostream>
@@ -78,7 +78,7 @@ int main(){
 }
 ```
 
-**namespaces.cpp**
+###namespaces.cpp
 
 ```cpp
 #include <iostream>
@@ -99,9 +99,10 @@ int main(){
 }
 ```
 
-Namespaces are used to create "shortcuts" for objects, classes, and functions. The scope operator "**::**" grants you access to object variables and methods.
+Namespaces are used to create "shortcuts" for objects, classes, and functions. The **scope operator** "::" grants you access to object variables and methods.
 
-**namespace_std.cpp**
+
+###namespace_std.cpp
 
 ```cpp
 #include <iostream>
@@ -109,7 +110,7 @@ using namespace std; //"using" makes the namespace "std" available for the entir
 
 int main(){
 	//std::cout << "Hello World!"; //without "using" namespace "std"
-	cout << "Hello World!"; //we don't need the scope operator "::" because we are "using" namespace "std"
+	cout << "Hello World!"; //we don't need the scope operator "::" because we are "using" namespace "std" globally
 	return 0;
 }
 ```
@@ -117,12 +118,78 @@ int main(){
 Since input and output operations are very common in c++ programs is a good idea to have this namespace declaration in your programs. In fact I will be using this declaration for now on.
 
 
+###functions.cpp
+```cpp
+#include <iostream>
+using namespace std;
+
+//declaring a function
+void hello(){
+	printf("Hello World!");
+}
+
+int main(){
+	hello(); //calling our function
+	return 0;	
+}
+```
+In our function below we are printing the string "Hello world!" to the default output.
+```cpp
+void hello(){
+	printf("Hello World!");
+}
+```
+Here is how you **call** your function:
+```cpp
+hello();
+```
+
+###functions_parameters.cpp
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void hello(char message[]){
+    printf("%s", message);
+}
+
+int main(){
+    char msg[40] = "Hello World!"; //array of characters (chars)
+    hello(msg); //sending message using parameters
+    return 0;
+}
+```
+Parameters (or arguments) is how you can pass information to your functions. In our example above we send the "Hello world!" string using parameters.
+
+
+###functions_prototypes.cpp
+```cpp
+#include <iostream>
+using namespace std;
+
+//prototypes
+void hello(char message[]);
+
+int main(){
+    char msg[40] = "Hello World!"; //array of characters (chars)
+    hello(msg); //sending message using parameters
+    return 0;
+}
+
+void hello(char message[]){
+    printf("%s", message);
+}
+```
+
+Note that we put the instruction "void hello(char message[]);" on top of our program. On the other hand our function is declared after our "main()" function. Declaring prototypes on top of our program will make the compiler "awere" of the function existence. Is a good way to **organize your code**. Programers just need to check on top of your program to see which functions can be used.
+
 
 OOP (Object Oriented Programing)
 --------------------------------
 C++ implements OOP features. Let's start with the concept of **classes**.
 
-**class.cpp**
+###class.cpp
 
 ```cpp
 #include <iostream>
@@ -145,7 +212,7 @@ Classes are a way to group certain characteristics and behaviors of an object. W
 **ATTENTION**: you must end the curl brackets with a semicolon (;) when declaring a class, otherwise you will get an error.
 
 
-**access_specifiers.cpp**
+###access_specifiers.cpp
 
 ```cpp
 #include <iostream>
