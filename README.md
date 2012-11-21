@@ -4,7 +4,8 @@ Is not required, but you may want to read "**Learn To Love C**" before read this
 
 This is an online reference for C++. Written and maintaned by [Mariz Melo](http://github.com/jmarizgit).<br>
 You can find this documentation and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/LTLCPP](http://github.com/jmarizgit/LTLCPP).
-<br/><br/>
+
+<br/>
 
 
 Table of contents
@@ -22,13 +23,15 @@ Before we get start make sure to meet the requirements:
 2. Familiarity with at least one **programing language** is recommended;
 3. An **C++ compiler**. You can compile and run all source code using [http://compilr.com](http://compilr.com).
 
+<br/>
 
 2. from Wikipedia <a id="#wikipedia"></a>
 -----------------
 _C++ (pronounced "see plus plus") is a statically typed, free-form, multi-paradigm, compiled, general-purpose programming language. It is regarded as an intermediate-level language, as it comprises a combination of both high-level and low-level language features.[3] Developed by Bjarne Stroustrup starting in 1979 at Bell Labs, it adds object oriented features, such as classes, and other enhancements to the C programming language. Originally named C with Classes, the language was renamed C++ in 1983, as a pun involving the increment operator._
 
 **link:** [http://en.wikipedia.org/wiki/C%2B%2B](http://en.wikipedia.org/wiki/C%2B%2B)
-<br/><br/>
+
+<br/>
 
 
 3. Introduction <a id="#introduction"></a>
@@ -213,6 +216,32 @@ void hello(char message[]){
 <br/>
 
 
+Strings
+-------
+Strings are a important part of any language, is not different in C++. Below you can have a brief idea how to use strings.<br/>
+In C++ you don't need to insert the library "< string.h >" if you already have "< iostream >" in your preprocessor directives. This is an interesting discussion that you can read about [here](http://www.cplusplus.com/forum/beginner/889/).
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+	string s1, s2;
+	s1 = "Hello"; //initializing a string
+	s2 = ("World!"); //another way to initialize
+	return 0;
+}
+```
+<br/>
+
+
+Files
+-----
+File operations are very common in real-life applications. Implement this feature is easy in C++, differently from C. You will need to include the "< fstream >" library using the preprocessor "#include".
+
+<br/>
+
+
 OOP (Object Oriented Programing)
 --------------------------------
 C++ implements the [OOP](http://en.wikipedia.org/wiki/Object-oriented_programming) paradigm. Let's start with the concept of **[classes](http://en.wikipedia.org/wiki/Class_(computer_science\))**.
@@ -264,4 +293,6 @@ int main(){
 }
 ```
 <br/>
+
+
 
