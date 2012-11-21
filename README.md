@@ -4,13 +4,14 @@ Is not required, but you may want to read "**Learn To Love C**" before read this
 
 This is an online reference for C++. Written and maintaned by [Mariz Melo](http://github.com/jmarizgit).<br>
 You can find this documentation and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/LTLCPP](http://github.com/jmarizgit/LTLCPP).
+<br/><br/>
 
 
 Table of contents
 -----------------
 1. [Pre-Requisites](#prerequisites)
 2. [Wikipedia](#wikipedia)
-
+<br/><br/>
 
 1. Pre-Requesites <a id="#prerequesites"></a>
 -----------------
@@ -22,18 +23,23 @@ Before we get start make sure to meet the requirements:
 3. An **C++ compiler**. You can compile and run all source code using [http://compilr.com](http://compilr.com).
 
 
-2. Wikipedia <a id="#wikipedia"></a>
-------------
+2. from Wikipedia <a id="#wikipedia"></a>
+-----------------
 _C++ (pronounced "see plus plus") is a statically typed, free-form, multi-paradigm, compiled, general-purpose programming language. It is regarded as an intermediate-level language, as it comprises a combination of both high-level and low-level language features.[3] Developed by Bjarne Stroustrup starting in 1979 at Bell Labs, it adds object oriented features, such as classes, and other enhancements to the C programming language. Originally named C with Classes, the language was renamed C++ in 1983, as a pun involving the increment operator._
 
 **link:** [http://en.wikipedia.org/wiki/C%2B%2B](http://en.wikipedia.org/wiki/C%2B%2B)
+<br/><br/>
 
 
 3. Introduction <a id="#introduction"></a>
-------------
+---------------
 Here is how you write a simple **hello world** program in c++:
 
+
 ###hello.cpp
+The "**#include**" (_preprocessor_) on top of our program says that the compiler should look for the standard library <iostream> and include its content before proceed with the program compilation. This process is called "**Preprocessor Directives**".<br/>
+The **iostream** library provides input and output functions to your program.<br/>
+All programs in C/C++ must have one **unique** function called **main()**. This function is the start point of your program.
 
 ```cpp
 //Standard Libraries
@@ -46,12 +52,11 @@ int main()
 	return 0; // 0 = successfully exit
 }
 ```
+<br/>
 
-The "**#include**" on top of our program says that the compiler should look for the standard library <iostream> and include its content before proceed with the program compilation. This process is called "**Preprocessor Directives**".<br/>
-The **iostream** library provides input and output functions to your program.<br/>
-All programs in C/C++ must have one **unique** function called **main()**. This function is the start point of your program.
 
 ###comments
+The " **//** " character is used at the beginning of the line and indicates a single line comment. The structure **/* comments */** allows you to write comments using multiple lines.
 
 ```cpp
 // this is a single line comment
@@ -60,10 +65,10 @@ All programs in C/C++ must have one **unique** function called **main()**. This 
    multiple lines.
 */
 ```
-The " **//** " character is used at the beginning of the line and indicates a single line comment. The structure **/* comments */** allows you to write comments using multiple lines.
+<br/>
+
 
 ###datatypes.cpp
-
 ```cpp
 #include <iostream>
 
@@ -77,8 +82,11 @@ int main(){
 	return 0;
 }
 ```
+<br/>
+
 
 ###namespaces.cpp
+Namespaces are used to create "shortcuts" for objects, classes, and functions. The **scope operator** "::" grants you access to object variables and methods.
 
 ```cpp
 #include <iostream>
@@ -98,11 +106,11 @@ int main(){
 	return 0;
 }
 ```
-
-Namespaces are used to create "shortcuts" for objects, classes, and functions. The **scope operator** "::" grants you access to object variables and methods.
+<br/>
 
 
 ###namespace_std.cpp
+Since input and output operations are very common in c++ programs is a good idea to have this namespace declaration in your programs. In fact I will be using this declaration for now on.
 
 ```cpp
 #include <iostream>
@@ -114,8 +122,26 @@ int main(){
 	return 0;
 }
 ```
+<br/>
 
-Since input and output operations are very common in c++ programs is a good idea to have this namespace declaration in your programs. In fact I will be using this declaration for now on.
+
+###input_output.cpp
+We will be using **cin** and **cout**. With "cout" we send messages to the standard output (in our case the monitor). With "cin" we read from the standard input (in this case the keyboard).
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+	int number; //integer variable declaration
+
+	cout << "Enter a number:" << endl; //send message to the output
+	cin >> number; //reading input from user
+	cout << "you entered:" << endl;
+	cout << number; //displays entered number
+}
+```
+<br/>
 
 
 ###functions.cpp
@@ -129,7 +155,7 @@ void hello(){
 }
 
 int main(){
-	hello(); //calling our function
+	hello(); //invoking our function
 	return 0;	
 }
 ```
@@ -139,13 +165,15 @@ void hello(){
 	printf("Hello World!");
 }
 ```
-Here is how you **call** your function:
+Here is how you **invoke** your function:
 ```cpp
 hello();
 ```
+<br/>
+
 
 ###functions_parameters.cpp
-
+Parameters (or arguments) is how you can pass information to your functions. In our example above we send the "Hello world!" string using parameters.
 ```cpp
 #include <iostream>
 using namespace std;
@@ -160,10 +188,11 @@ int main(){
     return 0;
 }
 ```
-Parameters (or arguments) is how you can pass information to your functions. In our example above we send the "Hello world!" string using parameters.
+<br/>
 
 
 ###functions_prototypes.cpp
+Note the instruction "void hello(char message[]);" on top of the program below. On the other hand our function is declared after our "main()" function. Declaring prototypes on top of our program will make the compiler "awere" of the function existence. Is a good way to **organize your code**. Programers just need to check on top of your program to see which functions can be used.
 ```cpp
 #include <iostream>
 using namespace std;
@@ -181,16 +210,16 @@ void hello(char message[]){
     printf("%s", message);
 }
 ```
-
-Note that we put the instruction "void hello(char message[]);" on top of our program. On the other hand our function is declared after our "main()" function. Declaring prototypes on top of our program will make the compiler "awere" of the function existence. Is a good way to **organize your code**. Programers just need to check on top of your program to see which functions can be used.
+<br/>
 
 
 OOP (Object Oriented Programing)
 --------------------------------
-C++ implements OOP features. Let's start with the concept of **classes**.
+C++ implements the [OOP](http://en.wikipedia.org/wiki/Object-oriented_programming) paradigm. Let's start with the concept of **[classes](http://en.wikipedia.org/wiki/Class_(computer_science\))**.
 
-###class.cpp
-
+###classes.cpp
+Classes are a way to group certain characteristics and behaviors of an object. With classes is easier for you to organize and upgrade your code.<br/>
+**ATTENTION**: you must end the curl brackets with a semicolon (;) when declaring a class, otherwise you will get an error.
 ```cpp
 #include <iostream>
 using namespace std;
@@ -206,14 +235,13 @@ int main(){
     return 0;
 }
 ```
-
-Classes are a way to group certain characteristics and behaviors of an object. With classes is easier for you to organize and upgrade your code.
-
-**ATTENTION**: you must end the curl brackets with a semicolon (;) when declaring a class, otherwise you will get an error.
+<br/>
 
 
 ###access_specifiers.cpp
-
+**Private** is the default access specifier in C++. Methods and attributes can only be accessed whithin the class.<br/>
+**Public** attributes and methods can be accessed for the entire program.<br/>
+**Protected** attributes and methods will act like private but can be accessed by inherited classes.
 ```cpp
 #include <iostream>
 using namespace std;
@@ -235,7 +263,5 @@ int main(){
     return 0;
 }
 ```
+<br/>
 
-**Private** is the default access specifier in C++. Methods and attributes can only be accessed whithin the class.<br/>
-**Public** attributes and methods can be accessed for the entire program.<br/>
-**Protected** attributes and methods will act like private but can be accessed by inherited classes.
