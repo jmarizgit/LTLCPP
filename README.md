@@ -1,6 +1,8 @@
 Learn To Love C++
 ===================
-This is a online reference for C++. Written and maintaned by [Mariz Melo](http://github.com/jmarizgit).<br>
+Is not required, but you may want to read "**Learn To Love C**" before read this material. You can find the C guide at [http://github.com/jmarizgit/LTLC](http://github.com/jmarizgit/LTLC).
+
+This is an online reference for C++. Written and maintaned by [Mariz Melo](http://github.com/jmarizgit).<br>
 You can find this documentation and the source files used here on the [github](http://github.com) repository at [http://github.com/jmarizgit/LTLCPP](http://github.com/jmarizgit/LTLCPP).
 
 
@@ -167,8 +169,6 @@ int main(){
 }
 ```
 
-**Private** is the default access specifier in C++. All methods and attributes are **private** by default. This means that the methods and attributes can only be accessed whithin the class.
-
-**Public** attributes and methods can be accessed for the entire program.
-
+**Private** is the default access specifier in C++. Methods and attributes can only be accessed whithin the class.<br/>
+**Public** attributes and methods can be accessed for the entire program.<br/>
 **Protected** attributes and methods will act like private but can be accessed by inherited classes.
