@@ -226,9 +226,11 @@ In C++ you don't need to insert the library "< string.h >" if you already have "
 using namespace std;
 
 int main(){
-	string s1, s2;
-	s1 = "Hello"; //initializing a string
-	s2 = ("World!"); //another way to initialize
+    string s1 = "This"; //initializing a string
+	string s2, s3;
+	s2 = "Hello"; //assigning a string
+	s3 = ("World!"); //another way to assign
+    cout << s1+" "+s2+" "+s3 << endl;
 	return 0;
 }
 ```
@@ -237,7 +239,7 @@ int main(){
 
 Files
 -----
-File operations are very common in real-life applications. Implement this feature is easy in C++, differently from C. You will need to include the "< fstream >" library using the preprocessor "#include".
+File operations are very common in real-life applications. Implement this feature is easy in C++, differently from C. You will need to include the **"< fstream >"** library using the preprocessor "#include".
 
 <br/>
 
